@@ -26,7 +26,7 @@ export default function HomePage() {
       </div>
       <div className="h-[350px] overflow-auto text-[25px] text-center">
         {Object.entries(list).map(([key, value]) => (
-          <div onClick={()=> handleDone(key)} className={`cursor-pointer ${value? 'line-through' : ''}`}>{key}</div>
+          <div key={key} onClick={()=> handleDone(key)} className={`cursor-pointer ${value? 'line-through' : ''}`}>{key}</div>
         ))}
       </div>
       <form
